@@ -3,10 +3,11 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
-
-var port = 3000;
-
 var app = express();
+
+var PORT = process.env.PORT || 8080; //storing TCP port in variable so we can bind to it later
+
+
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(process.cwd() + "/public"));
@@ -27,6 +28,9 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(port);
+app.listen(PORT, function() {  //the listen function also takes an optional callback function as a
+	//(cont. from above) second argument. This will run once app is ready to receive requests.
+  console.log("App listening on PORT " + PORT); //bind application to TCP port
+}); //Once our web api server is up and ready it will console.log "App listening on PORT --"
 
 
