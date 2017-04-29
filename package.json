@@ -1,4 +1,7 @@
 {
+  "engines": {
+  "node": "7.7.4"
+},
   "name": "burger",
   "version": "1.0.0",
   "description": "Node.js app that lets you devour burgers",
