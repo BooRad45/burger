@@ -5,8 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
+    "start": "node server.js",
+  "engines": {
+    "node": "7.7.4"
+  }
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BooRad45/burger.git"
